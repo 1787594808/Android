@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookDetail">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/header_xiangqing"
+        android:background="#f9f4f4">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/xiangqingye"
+            android:layout_centerInParent="true"
+            android:text="商品详情页"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/zt"
+        android:background="#979696"
+        android:layout_below="@id/header_xiangqing"/>
+    <com.example.bookstore.scoll.AutoScrollViewPager
+        android:id="@+id/book_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/zt"/>
+
+    <com.example.bookstore.scoll.BannerIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginTop="-50dp"
+        android:layout_below="@+id/book_image"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/zt2"
+        android:layout_below="@id/book_image"
+        android:background="#979696" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tit_desc_xiangqing"
+        android:layout_below="@id/book_value"
+        android:text="商品详细介绍"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/book_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zt2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="8dp"
+        android:text="名称："
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/book_wirter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="作者："
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@+id/book_name" />
+
+    <TextView
+        android:id="@+id/book_xiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="销量："
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@+id/book_wirter"/>
+
+    <TextView
+        android:id="@+id/book_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/book_xiao"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:text="类别：" />
+
+    <TextView
+        android:id="@+id/book_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/book_wirter"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="55dp"
+        android:text="￥119.00"
+        android:textColor="#f00"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:id="@+id/button_btn_xiangqing"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#fff">
+
+        <Button
+            android:id="@+id/add_shopcars"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f00"
+            android:gravity="center"
+            android:text="加入购物车"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/jiesuan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f00"
+            android:gravity="center"
+            android:text="支付"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/pinglun"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f00"
+            android:gravity="center"
+            android:text="评论"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/kanping"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f00"
+            android:gravity="center"
+            android:text="查看评论"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:id="@+id/kong_xiangqing"
+        android:layout_above="@id/button_btn_xiangqing"
+        android:background="#b9b8b8"/>
+
+    <ImageView
+        android:id="@+id/aa"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="invisible"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+    <ImageView
+        android:id="@+id/bb"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="invisible"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+    <ImageView
+        android:id="@+id/cc"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="invisible"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

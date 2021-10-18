@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE  mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sdust.dao.RemarkDao">
+    <sql id="remark">
+         select pid,uid,bid,comment from remark
+    </sql>
+
+    <select id="getRemarkById" resultType="cn.sdust.pojo.Remark">
+    select *
+    from remark
+    where bid=#{id}
+    </select>
+
+    <insert id="insertRemark"  parameterType="cn.sdust.pojo.Remark">
+        insert into remark(uid,bid,comment)
+        values (#{uid},#{bid},#{comment})
+    </insert>
+
+</mapper>

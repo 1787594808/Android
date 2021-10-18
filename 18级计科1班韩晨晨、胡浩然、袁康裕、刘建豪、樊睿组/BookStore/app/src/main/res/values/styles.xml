@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BannerIndicator">
+        <attr name="gap" format="dimension"/>
+        <attr name="slider_width" format="dimension"/>
+        <attr name="slider_height" format="dimension"/>
+        <attr name="slider_align">
+            <enum name="Left" value="1"/>
+            <enum name="Center" value="0" />
+            <enum name="Right" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

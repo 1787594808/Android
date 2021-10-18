@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE  mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sdust.dao.BookDao">
+    <sql id="book">
+         select bid,bname,bwriter,bdetail,bvalue,xiao,btype from book
+    </sql>
+    <select id="selectBookbyName" resultType="cn.sdust.pojo.Book">
+        select *
+        from book
+        where bname=#{bname}
+    </select>
+
+    <select id="selectBookbyValue" resultType="cn.sdust.pojo.Book">
+        select *
+        from book
+        where bvalue=#{bvalue}
+    </select>
+
+    <select id="selectBookbyId" resultType="cn.sdust.pojo.Book">
+        select *
+        from book
+        where bid=#{bid}
+    </select>
+
+    <select id="selectBookbyWriter" resultType="cn.sdust.pojo.Book">
+        select *
+        from book
+        where bwriter=#{bwriter}
+    </select>
+
+    <select id="selectBookbyType" resultType="cn.sdust.pojo.Book">
+        select *
+        from book
+        where btype = #{btype}
+    </select>
+
+    <select id="selectBook" resultType="cn.sdust.pojo.Book">
+        select *
+        from book
+    </select>
+    <select id="selectBookbyItem" resultType="cn.sdust.pojo.Book">
+        select *
+        from book where 1 = 1
+            <if test='bookName!= null and bookName != "" '>
+                AND bname LIKE CONCAT(CONCAT('%',#{bookName}),'%');
+            </if>
+            <if test='writer!= null and writer != ""'>
+                AND bwriter = #{writer}
+            </if>
+            <if test='type!= null and type != ""'>
+                AND btype = #{type}
+            </if>
+            <if test= "minValue!= null and minValue !=-1">
+                AND bvalue >= #{minValue}
+            </if>
+            <if test= "maxValue!= null and maxValue !=-1">
+                AND  #{maxValue} >= bvalue
+            </if>
+    </select>
+
+    <update id="addXiao">
+        update book
+        set xiao=#{value}
+        where bid=#{bid}
+    </update>
+</mapper>

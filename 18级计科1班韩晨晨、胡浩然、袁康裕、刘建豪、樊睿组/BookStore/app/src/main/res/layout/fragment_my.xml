@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/First"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#FFB6C1">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/drawee_img"
+                android:layout_alignBottom="@+id/drawee_img"
+                android:layout_marginStart="-40dp"
+                android:layout_marginBottom="-29dp"
+                android:src="@mipmap/touxiang"
+                app:riv_border_color="#ffb6c1"
+                app:riv_border_width="2dp"
+                app:riv_oval="true"/>
+            <ImageView
+                android:id="@+id/drawee_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                />
+
+            <TextView
+                android:id="@+id/m_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/drawee_img"
+                android:textSize="20sp"
+                android:text="疯狂的石头"
+
+                />
+
+            <Button
+                android:id="@+id/introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:layout_below="@+id/m_username"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="27dp"
+                android:layout_toEndOf="@+id/drawee_img"
+                android:text="点这里可以添加个性签名"
+                android:background="@null"
+                app:backgroundTint="#ffb6c1"
+                android:textSize="15sp"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Second"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FFC0BB"
+            >
+            <ImageView
+                android:id="@+id/image_money"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/money"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image_money"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="20dp"
+                android:text="可用余额："
+                />
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image_money"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="110dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/Third"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFC0AA">
+
+            <Button
+                android:id="@+id/kanding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@null"
+                android:shadowColor="@color/white"
+                android:text="我的订单"
+                android:textSize="40dp"
+                app:backgroundTint="#ffb6c1" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button2_2"
+        android:id="@+id/button2_3_5"
+        /> <!-- 2.3.5中，该layerout是第二个Activity的布局，通过该按钮返回数据给FirstActivity -->
+
+</LinearLayout>

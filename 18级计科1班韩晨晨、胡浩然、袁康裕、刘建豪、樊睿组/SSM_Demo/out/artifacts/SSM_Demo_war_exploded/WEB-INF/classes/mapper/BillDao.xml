@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE  mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sdust.dao.BillDao">
+    <sql id="Bill">
+         select oid,uid,bid,time from bill
+    </sql>
+
+    <insert id="insertBill" parameterType="cn.sdust.pojo.Bill">
+        insert into bill(uid,bid,time) values (#{uid},#{bid},#{time});
+    </insert>
+
+    <select id="getBillByid" resultType="cn.sdust.pojo.Bill">
+        select *
+        from bill
+        where uid=#{uid}
+    </select>
+</mapper>
